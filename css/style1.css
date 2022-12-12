@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* 브라우저 리셋 */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    /* 글꼴은 용량이 크기 때문에 최대 2개 정도만 사용하는게 좋음 */
+    font-size: 13px;
+    line-height: 20px;
+    color: rgb(26, 26, 26);
+}
+ul, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* 이미지를 상단기준으로 맞춰줌 */
+img{
+    vertical-align: top;
+    border: 0;
+}
+/* .브라우저 리셋 */
+
+.wrap{
+    /* background-color: antiquewhite; */
+    min-width: 1240px;
+}
+.header{
+    padding: 30px 0;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.gnb ul{
+    display: flex;
+}
+.gnb li{
+    margin-right: 50px;
+}
+.gnb a{
+    font-size: 16px;
+    color: rgb(37, 37, 37);
+}
+.gnb a:hover{
+    color: brown;
+}
+
+.member ul{
+    display: flex;
+}
+.member a{
+    color: rgb(37, 37, 37);
+}
+.member a:hover{
+    border-bottom: 1px solid rgb(73, 73, 73);
+}
+.member li{
+    margin-left: 10px;
+}
+
+.main1{
+    height: 480px;
+    position: relative;
+    overflow: hidden;
+}
+.main1IMG{
+    position: absolute;
+    left: 50%;
+    margin-left: -800px;
+}
+
+.main2{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.more{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.main3 h2{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.more a{
+    display: flex;
+    font-size: 14px;
+    color: rgb(73, 73, 73);
+}
+.more img{
+    margin-top: 6px;
+}
+
+.item{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1220px;
+}
+
+.item ul{
+    display: flex;
+}
+.item img{
+    width: 100%;
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+}
+.item a{
+    color: rgb(37, 37, 37);
+}
+.item ul li{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.item a .name{
+   font-weight: lighter;
+}

@@ -1,0 +1,181 @@
+@charset "utf-8";
+/* 브라우저 리셋 */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    /* 글꼴은 용량이 크기 때문에 최대 2개 정도만 사용하는게 좋음 */
+    font-size: 13px;
+    line-height: 20px;
+    color: rgb(26, 26, 26);
+}
+ul, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* 이미지를 상단기준으로 맞춰줌 */
+img{
+    vertical-align: top;
+    border: 0;
+}
+/* .브라우저 리셋 */
+
+.wrap{
+    width: 100%;
+    min-width: 1240px;
+    /* 반드시 보여야 하는 최소너비값(안전사이즈)+@ ->보다 화면이 작을시 스크롤이 생김 */
+}
+
+.header{
+    height: 80px;
+}
+.headerin{
+    width: 1200px;
+    height: 80px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.headerin .gnb ul{
+    display: flex;
+}
+
+.gnb li{
+    margin-right: 50px;
+}
+/* a태그의 글자색은 반드시 a태그에서 변경해야함 */
+.gnb li a{
+    color: rgb(61, 61, 61);
+    font-size: 18px;
+}
+.gnb li a:hover{
+    color: rgb(255, 88, 152);
+}
+.member li a{
+    color: rgb(61, 61, 61);
+}
+.member li a:hover{
+    text-decoration: overline;
+    /* border-bottom: 1px solid; */
+}
+.member ul{
+    display: flex;
+}
+.member li{
+    margin-left: 15px;
+}
+
+.main1{
+    height: 480px;
+/* 포지션을 설정하면서 main1의 높이가 0이 되어버렸으므로 이미지의 높이와 같은 높이를 지정해줌 */
+    position: relative;
+    background-color: cadetblue;
+    overflow: hidden;
+    /* overflow:hidden 
+    내가 보고있는 부분에서 넘어간 부분-> 스크롤 생기지 않음
+    main1의 공간 밖의 내용을 보이지않게 설정함 */
+    margin-bottom: 50px;
+}
+.main1Img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -800px;
+}
+/* 
+    ※ .main1Img의 이미지 너비값이 안전사이즈보다 넓음
+    그래서 강제로 가운데 배치하기 위해서 position : absolute를 사용함
+    .main1의 하나뿐인 자식인 .main1Img가 absolute처리가 되면
+    세로높이값이 0으로 처리되므로
+    .main1에서 사용할 만큼의 높이값을 강제로 입력함
+
+    ※ 브라우저의 너비보다 더 큰 이미지때문에 아래쪽에 스크롤이 생기므로
+    이를 정리하기위해서 main1에 overflow:hidden;을 설정함
+
+    ※이로인해 안전사이즈보다 브라우저 크기가 작아질 경우
+    .main1Img의 이미지가 잘려서 표시되므로
+    전체영역의 최소너비값(min-width)을 안전사이즈의 너비로 고정함.(wrap)
+*/
+
+.main2{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.main3{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.main3 h2{
+    margin-bottom: 20px;
+}
+.main3 h2 span{
+    font-weight: 300; 
+}
+.main3 a{
+    color: rgb(73, 73, 73);
+}
+.main3 ul{
+    display: flex;
+    justify-content: space-between;
+}
+.main3 li{
+    width: 280px;
+    text-align: center;
+}
+.main3 .itemImg{
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+}
+.main3 .itemImg img{
+    width: 100%;
+    height: 280px;
+
+}
+.main3 .itemName{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.main3 .itemBrand, .main3 .itemPrice{
+    font-weight: 600;
+}
+
+
+.main3 .more{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.main4 ul{
+    width: 1200px;
+    margin: 0 auto 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main4 li{
+    position: relative;
+    width: 380px;
+}
+
+.main4 .m4Txt{
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: rgb(48, 48, 48);
+}
